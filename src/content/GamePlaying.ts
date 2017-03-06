@@ -124,7 +124,7 @@ module game {
 			(<eui.Label>this.tipSkillGroup.getElementAt(1)).text = GameConstantData.SILVER_TIP_SKILL_COST.toString();
 			(<eui.Label>this.clearSkillGroup.getElementAt(1)).text = GameConstantData.SILVER_CLEAR_SKILL_COST.toString();
 			(<eui.Label>this.changeSkillGroup.getElementAt(1)).text = GameConstantData.SILVER_CHANGE_SKILL_COST.toString();
-			this.questionImg.source = "resource/assets/" + this.levelDataItem.img;
+			this.questionImg.source = RES.getRes(this.levelDataItem.img);
 			this.resultMoneyText.text = GameConstantData.SILVER_WIN_GET.toString();
 			this.meanText.text = this.levelDataItem.tip;
 			this.fromText.text = this.levelDataItem.content;

@@ -19,9 +19,9 @@ module game {
 			this.musicBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.btnClick, this);
 			var musicSwitch: boolean = SoundManager.getInstance().musicSwitch;
 			this.musicBtn.selected = !musicSwitch;
-			if(musicSwitch){
+			/*if(musicSwitch){
 				SoundManager.getInstance().playSound(GameConstantData.SOUND_BG_MUSIC);
-			}
+			}*/
 		}
 
 		private onRemove(evt: egret.Event) {
@@ -36,6 +36,7 @@ module game {
 			switch (evt.currentTarget) {
 				case this.startBtn:
 					egret.log("游戏开始...");
+					SoundManager.getInstance().playSound(GameConstantData.SOUND_BG_MUSIC);
 					this.parent.dispatchEventWith(GameEvents.GAME_CONTENT_LOAD, false, GamePageConstant.GAME_LEVEL);
 					break;
 				case this.musicBtn:
