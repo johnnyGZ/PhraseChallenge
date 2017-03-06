@@ -1,12 +1,24 @@
-*.class
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+#忽略所有文件
+/*
+#提交libs目录
+!/libs
+#提交resource目录
+!/resource
+#提交src目录
+!/src
+#提交template目录
+!/template
+#提交.gitignore
+!.gitignore
+#提交egretProperties.json
+!egretProperties.json
+#提交favicon.ico
+!favicon.ico
+#提交index.html
+!index.html
+#提交LICENSE
+!LICENSE
+#提交README.md
+!README.md
+#提交wingProperties.json
+!wingProperties.json

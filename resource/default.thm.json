@@ -1,0 +1,13 @@
+{
+  "skins": {},
+  "autoGenerateExmlsList": true,
+  "exmls": [
+    "resource/skins/Answer.exml",
+    "resource/skins/GameLevel.exml",
+    "resource/skins/GameLoading.exml",
+    "resource/skins/GamePlaying.exml",
+    "resource/skins/GameStart.exml",
+    "resource/skins/LevelInfo.exml",
+    "resource/skins/Word.exml"
+  ]
+}

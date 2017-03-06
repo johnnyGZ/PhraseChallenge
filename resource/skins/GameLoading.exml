@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GameLoading" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect fillColor="0x704646" fillAlpha="0.5" width="100%" height="100%" x="0" y="0"/>
+	<e:Image id="loadingPng" source="loading_png" anchorOffsetX="47.5" anchorOffsetY="45" x="360.5" y="485"/>
+	<e:Label text="正在加载..." y="549" anchorOffsetX="0" width="179" anchorOffsetY="0" height="39" x="233" fontFamily="SimSun" textColor="0x9a8ae2" bold="true"/>
+	<e:Label id="progressTxt" text="100%" x="400.5" y="549" anchorOffsetX="0" width="87" textColor="0x9a8ae2" bold="true"/>
+</e:Skin>

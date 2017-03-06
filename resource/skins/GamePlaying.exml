@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="NewFile" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:game="game.*">
+	<e:Image source="GameBG3_jpg" x="0" y="0" width="100%" height="100%"/>
+	<e:Button id="returnBtn" label="" x="7" y="9">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="BackBtn_png" source.down="BackBtn1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:ToggleButton id="musicBtn" label="" x="634" y="9">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="music_png" source.down="music_disable_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:ToggleButton>
+
+	<e:Image source="MoneyBG_png" x="387" y="11"/>
+	<e:Image source="MoneyPic_png" x="544" y="21"/>
+	<e:Label id="moneyText" text="5" x="403" y="17" anchorOffsetX="0" width="138" anchorOffsetY="0" height="55" verticalAlign="middle" textAlign="center"/>
+	<e:Label text="第" x="113" y="12" anchorOffsetY="0" height="66" verticalAlign="middle" textAlign="center"/>
+	<e:Label text="関" x="206" y="12" anchorOffsetY="0" height="66" verticalAlign="middle" textAlign="center"/>
+	<e:Label id="levelLabel" text="1" x="143" y="12" anchorOffsetY="0" height="66" verticalAlign="middle" textAlign="center" anchorOffsetX="0" width="63"/>
+	<e:Image source="WordFrame_png" y="237.5" x="38"/>
+
+
+
+	<e:Group id="tipSkillGroup" x="30" y="106">
+		<e:Image source="skill_tip_png" x="0" y="0" touchEnabled="false"/>
+		<e:Label text="30" x="70" y="56" anchorOffsetX="0" width="47" touchEnabled="false"/>
+	</e:Group>
+	<e:Group id="clearSkillGroup" x="271" y="106">
+		<e:Image source="skill_clear_png" x="0" y="0"/>
+		<e:Label text="20" x="81" y="56" anchorOffsetX="0" width="47"/>
+	</e:Group>
+
+	<e:Group id="changeSkillGroup" x="513" y="106">
+		<e:Image source="skill_change_png" x="0" y="0"/>
+		<e:Label text="50" x="76" y="56" anchorOffsetX="0" width="47"/>
+	</e:Group>
+	<e:Image id="questionImg" width="390" height="260" y="297" x="165"/>
+	<e:Group id="answerGroup" x="174.5" y="584">
+		<game:Answer width="85" height="85" x="0" y="0" skinName="Answer"/>
+		<game:Answer width="85" height="85" x="95.5" y="0" skinName="Answer"/>
+		<game:Answer width="85" height="85" x="190.5" y="0" skinName="Answer"/>
+		<game:Answer width="85" height="85" x="285.5" y="0" skinName="Answer"/>
+
+	</e:Group>
+	<e:Group id="wordGroup" x="37" y="707">
+		<game:Word width="80" height="80" x="14" y="24" skinName="Word"/>
+		<game:Word width="80" height="80" x="148.72222222222223" y="24" skinName="Word"/>
+		<game:Word width="80" height="80" x="283" y="24" skinName="Word"/>
+		<game:Word width="80" height="80" x="417.5" y="24" skinName="Word"/>
+		<game:Word width="80" height="80" x="552" y="24" skinName="Word"/>
+		<game:Word width="80" height="80" x="14" y="119" skinName="Word"/>
+		<game:Word width="80" height="80" x="148.33333333333337" y="119" skinName="Word"/>
+		<game:Word width="80" height="80" x="282.5555555555556" y="119" skinName="Word"/>
+		<game:Word width="80" height="80" x="417.7777777777778" y="119" skinName="Word"/>
+		<game:Word width="80" height="80" x="552" y="119" skinName="Word"/>
+		<game:Word width="80" height="80" x="14" y="213" skinName="Word"/>
+		<game:Word width="80" height="80" x="148" y="213" skinName="Word"/>
+		<game:Word width="80" height="80" x="283" y="213" skinName="Word"/>
+		<game:Word width="80" height="80" x="417" y="213" skinName="Word"/>
+		<game:Word width="80" height="80" x="552" y="213" skinName="Word"/>
+		<game:Word width="80" height="80" x="14" y="308" skinName="Word"/>
+		<game:Word width="80" height="80" x="148.5" y="308" skinName="Word"/>
+		<game:Word width="80" height="80" x="283" y="308" skinName="Word"/>
+		<game:Word width="80" height="80" x="417.5" y="308" skinName="Word"/>
+		<game:Word width="80" height="80" x="552" y="308" skinName="Word"/>
+	</e:Group>
+	<e:Group id="winGroup" width="720" height="1136" x="0" y="0" visible="false">
+		<e:Rect width="100%" height="100%" fillAlpha="0.5"/>
+		<e:Image source="Result_png" x="45" y="554"/>
+		<e:Button id="nextBtn" label="" x="454" y="918">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="ResultBtn_png" source.down="ResultBtn1_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Label id="resultMoneyText" text="5" x="330" y="948" verticalAlign="middle" textAlign="center" anchorOffsetX="0" width="44" anchorOffsetY="0" height="36" size="40" textColor="0xff0000"/>
+		<e:Label id="meanText" text="解释" x="113" y="666" anchorOffsetX="0" width="512" anchorOffsetY="0" height="64" textColor="0x000000"/>
+		<e:Label id="fromText" text="出处" x="113" y="770" anchorOffsetX="0" width="512" anchorOffsetY="0" height="145" textColor="0x000000"/>
+	</e:Group>
+	<e:Group id="alertGroup" width="720" height="1136" x="0" y="0">
+		<e:Rect width="100%" height="100%" fillAlpha="0.5"/>
+		<e:Image source="Dialog_png" x="106.5" y="418.5"/>
+		<e:Label id="alertText" text="Label" x="154" y="483" anchorOffsetX="0" width="415" anchorOffsetY="0" height="112" textColor="0x000000"/>
+		<e:Button id="confirmBtn" label="" x="185" y="613">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="YesBtn_jpg" source.down="YesBtn1_jpg"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="cancelBtn" label="" x="403" y="613">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="NoBtn_png" source.down="NoBtn1_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+</e:Skin>
