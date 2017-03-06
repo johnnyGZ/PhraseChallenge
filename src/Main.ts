@@ -91,11 +91,7 @@ class Main extends eui.UILayer {
                 this.loadPage("home");
                 break;
             default:
-                if(event.groupName.indexOf("barrier") != -1) {
-                    this.pageLoadedHandler(GamePageConstant.GAME_PLAYING);
-                } else {
-                    this.pageLoadedHandler(event.groupName);
-                }
+                this.pageLoadedHandler(this._loadingPageName);
                 break;
         }
         /*RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
@@ -160,34 +156,29 @@ class Main extends eui.UILayer {
     
     private loadPage(pageName: string) {
         this._loadingPageName = pageName;
+        this.addChild(this._gameLoading);
         switch (pageName) {
             case "home":
-                this.addChild(this._gameLoading);
-                RES.loadGroup(pageName);
+                RES.loadGroup(this._loadingPageName);
                 break;
             case "sound":
-                this.addChild(this._gameLoading);
-                RES.loadGroup(pageName);
+                RES.loadGroup(this._loadingPageName);
                 break;
             case GamePageConstant.GAME_PLAYING:
-                this.addChild(this._gameLoading);
                 if(!LevelDataManager.getInstance().getLevelItem(this._viewManager.selectLevel)) {
                     var groupName = "barrier" + (this._viewManager.selectLevel - ((this._viewManager.selectLevel - 1) % GameConstantData.GAME_LEVEL_NUM));
                     RES.loadGroup(groupName);
                 } else {
-                    this.pageLoadedHandler(pageName);
+                    this.pageLoadedHandler(this._loadingPageName);
                 }
                 break;
             default:
-                this.pageLoadedHandler(pageName);
+                this.pageLoadedHandler(this._loadingPageName);
                 break;
         }
     }
 
     private pageLoadedHandler(pageName: string) {
-        if (this._gameLoading.parent) {
-            this._gameLoading.parent.removeChild(this._gameLoading);
-        }
         switch (pageName) {
             case "home":
                 this.loadPage("sound");
@@ -199,6 +190,9 @@ class Main extends eui.UILayer {
             default:
                 this._viewManager.pageReadyHandler(pageName);
                 break;
+        }
+        if (this._gameLoading.parent) {
+            this._gameLoading.parent.removeChild(this._gameLoading);
         }
     }
 }

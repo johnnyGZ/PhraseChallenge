@@ -43,17 +43,23 @@ class ViewManager extends egret.DisplayObjectContainer {
 		this.removeChildren();
 		switch (pageName) {
 			case GamePageConstant.GAME_START:
-				this._gameStart = new game.GameStart();
+				if(!this._gameStart) {
+					this._gameStart = new game.GameStart();
+				}
 				this._uiFocused = this._gameStart;
 				break;
 			case GamePageConstant.GAME_LEVEL:
-				this._gameLevel = new game.GameLevel();
+				if(!this._gameLevel) {
+					this._gameLevel = new game.GameLevel();
+				}
 				this._uiFocused = this._gameLevel;
 				break;
 			case GamePageConstant.GAME_PLAYING:
 				//加载关卡数据
 				LevelDataManager.getInstance().initLevelItems(this.selectLevel);
-				this._gamePlaying = new game.GamePlaying();
+				if(!this._gamePlaying) {
+					this._gamePlaying = new game.GamePlaying();
+				}
 				this._uiFocused = this._gamePlaying;
 				break;
 			default:

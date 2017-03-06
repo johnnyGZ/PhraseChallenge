@@ -22,8 +22,8 @@ module game {
 		}
 
 		private onRemove(evt: egret.Event) {
-			this.removeEventListener(egret.Event.ADDED_TO_STAGE, this.onAdd, this);
-			this.removeEventListener(egret.Event.REMOVED_FROM_STAGE, this.onRemove, this);
+			// this.removeEventListener(egret.Event.ADDED_TO_STAGE, this.onAdd, this);
+			// this.removeEventListener(egret.Event.REMOVED_FROM_STAGE, this.onRemove, this);
 			this.returnBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.btnClick, this);
 			this.musicBtn.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.btnClick, this);
 			this.tipSkillGroup.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.btnClick, this);
