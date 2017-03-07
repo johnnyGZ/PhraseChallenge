@@ -15,7 +15,7 @@
 #提交favicon.ico
 !favicon.ico
 #提交index.html
-!index.html
+#index.html
 #提交LICENSE
 !LICENSE
 #提交README.md
