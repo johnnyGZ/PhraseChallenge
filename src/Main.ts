@@ -156,7 +156,7 @@ class Main extends eui.UILayer {
     
     private loadPage(pageName: string) {
         this._loadingPageName = pageName;
-        this.addChild(this._gameLoading);
+        this.addChildAt(this._gameLoading, this.numElements);
         switch (pageName) {
             case "home":
                 RES.loadGroup(this._loadingPageName);
@@ -189,10 +189,10 @@ class Main extends eui.UILayer {
                 break;
             default:
                 this._viewManager.pageReadyHandler(pageName);
+                if (this._gameLoading.parent) {
+                    this._gameLoading.parent.removeChild(this._gameLoading);
+                }
                 break;
-        }
-        if (this._gameLoading.parent) {
-            this._gameLoading.parent.removeChild(this._gameLoading);
         }
     }
 }
